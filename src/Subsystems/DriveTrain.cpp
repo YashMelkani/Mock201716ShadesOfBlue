@@ -22,6 +22,15 @@ void DriveTrain::tankDrive(double leftJoyRaw, double rightJoyRaw) {
 	leftWheel->Set(leftSpeed);
 	rightWheel->Set(rightSpeed);
 }
+
+CANTalon* DriveTrain::GetLeftWheel(){
+	return leftWheel;
+}
+
+CANTalon* DriveTrain::GetRightWheel(){
+	return rightWheel;
+}
+
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 

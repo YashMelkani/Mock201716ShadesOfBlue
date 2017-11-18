@@ -18,6 +18,8 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void tankDrive(double leftJoyRaw, double rightJoyRaw);
+	CANTalon*GetLeftWheel();
+	CANTalon*GetRightWheel();
 	~DriveTrain();
 };
 
