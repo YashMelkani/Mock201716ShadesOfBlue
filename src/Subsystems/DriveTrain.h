@@ -11,6 +11,8 @@ private:
 	// for methods that implement subsystem capabilities
 	CANTalon* leftWheel;
 	CANTalon* rightWheel;
+	Ultrasonic* frontUltra;
+	AnalogGyro* gyro;
 	double leftJoyRaw;
 	double rightJoyRaw;
 	double mult;
@@ -18,8 +20,10 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void tankDrive(double leftJoyRaw, double rightJoyRaw);
-	CANTalon*GetLeftWheel();
-	CANTalon*GetRightWheel();
+	CANTalon* GetLeftWheel();
+	CANTalon* GetRightWheel();
+	double GetFrontUltra();
+	AnalogGyro* GetGyro();
 	~DriveTrain();
 };
 

@@ -4,11 +4,17 @@
 #include "../CommandBase.h"
 #include "../Utilities/WVPIDController.h"
 #include "TankDrive.h"
+#include "RobotMap.h"
 
 class DriveStraight : public CommandBase {
 private:
-	WVPIDController* driveStraightPID;
-	double speed;
+	RobotDrive* myRobot;
+	// PIDController* DrivePID;
+	double angleStraight;
+	double stopingDistance;
+	double travelSpeed;
+	double Kp;
+
 public:
 	DriveStraight();
 	void Initialize();

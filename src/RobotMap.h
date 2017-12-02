@@ -18,7 +18,11 @@
 // constexpr int RANGE_FINDER_PORT = 1;
 // constexpr int RANGE_FINDER_MODULE = 1;
 
-const int rightMotorPort = 4;
-const int leftMotorPort = 0;
+const int TrigPin = 1;
+const int EchoPin = 2;
+const int GyroPin = 3;
+
+const int rightMotorPort = 2;
+const int leftMotorPort = 1;
 
 #endif  // ROBOTMAP_H
