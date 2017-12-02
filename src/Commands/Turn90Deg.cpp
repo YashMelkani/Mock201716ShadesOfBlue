@@ -30,8 +30,8 @@ bool Turn90Deg::IsFinished() {
 
 // Called once after isFinished returns true
 void Turn90Deg::End() {
-	drive->GetLeftWheel()->Set(turnSpeed);
-	drive->GetRightWheel()->Set(-turnSpeed);
+	drive->GetLeftWheel()->Set(0);
+	drive->GetRightWheel()->Set(0);
 }
 
 // Called when another command which requires one or more of the same
