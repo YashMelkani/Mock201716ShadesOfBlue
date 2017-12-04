@@ -12,7 +12,7 @@ private:
 	CANTalon* leftWheel;
 	CANTalon* rightWheel;
 	Ultrasonic* frontUltra;
-	AnalogGyro* gyro;
+	Gyro* gyro;
 	double leftJoyRaw;
 	double rightJoyRaw;
 	double mult;
@@ -23,7 +23,7 @@ public:
 	CANTalon* GetLeftWheel();
 	CANTalon* GetRightWheel();
 	double GetFrontUltra();
-	AnalogGyro* GetGyro();
+	Gyro* GetGyro();
 	~DriveTrain();
 };
 

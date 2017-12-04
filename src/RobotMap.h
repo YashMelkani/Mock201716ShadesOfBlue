@@ -22,7 +22,7 @@ const int TrigPin = 1;
 const int EchoPin = 2;
 const int GyroPin = 3;
 
-const int rightMotorPort = 2;
-const int leftMotorPort = 1;
+const int rightMotorPort = 0;
+const int leftMotorPort = 4;
 
 #endif  // ROBOTMAP_H
