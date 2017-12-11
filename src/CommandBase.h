@@ -6,6 +6,7 @@
 
 #include <Commands/Command.h>
 #include "Subsystems/DriveTrain.h"
+#include "Subsystems/PistonBoard.h"
 #include "OI.h"
 
 
@@ -23,6 +24,7 @@ public:
 
 	static std::unique_ptr<OI> oi;
 	static DriveTrain* drive;
+	static PistonBoard* pistonBoard;
 
 	static void initialize();
 };

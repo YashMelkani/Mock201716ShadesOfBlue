@@ -12,7 +12,7 @@ private:
 	CANTalon* leftWheel;
 	CANTalon* rightWheel;
 	Ultrasonic* frontUltra;
-	Gyro* gyro;
+	ADXRS450_Gyro* gyro;
 	double leftJoyRaw;
 	double rightJoyRaw;
 	double mult;

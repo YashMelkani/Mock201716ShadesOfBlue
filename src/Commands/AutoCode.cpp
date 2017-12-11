@@ -5,8 +5,9 @@ AutoCode::AutoCode() {
 	// e.g. AddSequential(new Command1());
 	//      AddSequential(new Command2());
 	// these will run in order.
-	AddSequential(new DriveStraight);
-	AddSequential(new Turn90Deg);
+	AddSequential(new DriveStraight());
+	AddSequential(new Turn90Deg());
+
 	// To run multiple commands at the same time,
 	// use AddParallel()
 	// e.g. AddParallel(new Command1());
