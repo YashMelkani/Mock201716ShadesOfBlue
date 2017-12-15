@@ -7,7 +7,7 @@ DriveStraight::DriveStraight() : myRobot(new RobotDrive(LEFTMOTORPORT, RIGHTMOTO
 	// eg. Requires(Robot::chassis.get());
 	Requires(drive);
 	angleStraight = 0.0;
-	stopingDistance = 18.0;
+	stopingDistance = 12.0;
 	travelSpeed = -0.75;
 	Kp = 0.2;
 }
@@ -25,6 +25,10 @@ void DriveStraight::Execute() {
 
 // Make this return true when this Command no longer needs to run execute()
 bool DriveStraight::IsFinished() {
+	while(drive->GetFrontUltra() < stopingDistance+24){
+		return false;
+	}
+
 	if (drive->GetFrontUltra() > stopingDistance) {
 		return false;
 	}

@@ -16,7 +16,6 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
 void DriveTrain::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	SetDefaultCommand(new TankDrive());
-
 }
 
 void DriveTrain::tankDrive(double leftJoyRaw, double rightJoyRaw) {
