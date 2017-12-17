@@ -16,7 +16,6 @@ void TankDrive::Execute() {
 	double leftJoyRaw = oi->getLeftJoy()->GetY();
 	double rightJoyRaw = oi->getRightJoy()->GetY();
 	drive->tankDrive(leftJoyRaw, rightJoyRaw);
-
 }
 
 // Make this return true when this Command no longer needs to run execute()
