@@ -1,9 +1,7 @@
 #ifndef TankDrive_H
 #define TankDrive_H
-#include "iostream"
 #include "WPILib.h"
 #include "../CommandBase.h"
-#include "Utilities/NetworkTablesInterface.h"
 
 class TankDrive : public CommandBase {
 public:

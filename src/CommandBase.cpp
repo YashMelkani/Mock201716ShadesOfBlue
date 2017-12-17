@@ -11,7 +11,6 @@
 
 std::unique_ptr<OI> CommandBase::oi = std::make_unique<OI>();
 DriveTrain* CommandBase::drive = nullptr;
-PistonBoard* CommandBase::pistonBoard = nullptr;
 
 CommandBase::CommandBase(const std::string &name) :
 		frc::Command(name) {
@@ -20,5 +19,4 @@ CommandBase::CommandBase(const std::string &name) :
 
 void CommandBase::initialize() {
 	drive = new DriveTrain();
-	pistonBoard = new PistonBoard();
 }

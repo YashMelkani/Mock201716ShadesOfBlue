@@ -1,6 +1,6 @@
 #include "DriveStraight.h"
 
-DriveStraight::DriveStraight() : myRobot(new RobotDrive(LEFTMOTORPORT, RIGHTMOTORPORT))
+DriveStraight::DriveStraight() : myRobot(new RobotDrive(leftMotorPort, rightMotorPort))
 // DrivePID(new PIDController(0.1,0.0,0.01,drive->GetGyro(), drive->GetRightWheel())),
 {
 	// Use Requires() here to declare subsystem dependencies
@@ -8,8 +8,8 @@ DriveStraight::DriveStraight() : myRobot(new RobotDrive(LEFTMOTORPORT, RIGHTMOTO
 	Requires(drive);
 	angleStraight = 0.0;
 	stopingDistance = 18.0;
-	travelSpeed = -0.75;
-	Kp = 0.2;
+	travelSpeed = 15.0;
+	Kp = 0.65;
 }
 
 // Called just before this Command runs the first time

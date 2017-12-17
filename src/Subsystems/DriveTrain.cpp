@@ -3,11 +3,11 @@
 #include "Commands/TankDrive.h"
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
-	leftWheel(new CANTalon(LEFTMOTORPORT)),
-	rightWheel(new CANTalon(RIGHTMOTORPORT)),
-	frontUltra(new Ultrasonic(TRIGPIN, ECHOPIN)),
-	gyro(new ADXRS450_Gyro()) {
-	mult = -1;
+	leftWheel(new CANTalon(leftMotorPort)),
+	rightWheel(new CANTalon(rightMotorPort)),
+	frontUltra(new Ultrasonic(TrigPin, EchoPin)),
+	gyro(new Gyro(GyroPin)) {
+	mult = -10;
 	leftJoyRaw = 1;
 	rightJoyRaw = 1;
 	frontUltra->SetAutomaticMode(true);
