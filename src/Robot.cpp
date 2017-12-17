@@ -6,19 +6,17 @@
 #include <LiveWindow/LiveWindow.h>
 #include <SmartDashboard/SendableChooser.h>
 #include <SmartDashboard/SmartDashboard.h>
-#include "Utilities/NetworkTablesInterface.h"
-#include "Commands/TankDrive.h"
 
+#include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
 
 class Robot: public frc::IterativeRobot {
 public:
 	void RobotInit() override {
-		//chooser.AddDefaul
-		("Default Auto", new TankDrive());
+		chooser.AddDefault("Default Auto", new ExampleCommand());
 		// chooser.AddObject("My Auto", new MyAutoCommand());
-		CommandBase::initialize();
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
+
 	}
 
 	/**
@@ -32,11 +30,6 @@ public:
 
 	void DisabledPeriodic() override {
 		frc::Scheduler::GetInstance()->Run();
-
-		frc::SmartDashboard::PutNumber("CVDistance", NetworkTablesInterface::getDistance());
-		frc::SmartDashboard::PutNumber("CVAltitude", NetworkTablesInterface::getAltitude());
-		frc::SmartDashboard::PutNumber("CVAzimuth", NetworkTablesInterface::getAzimuth());
-		frc::SmartDashboard::PutString("CVOrientation", NetworkTablesInterface::getOrientation());
 	}
 
 	/**

@@ -6,8 +6,8 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
 	leftWheel(new CANTalon(leftMotorPort)),
 	rightWheel(new CANTalon(rightMotorPort)),
 	frontUltra(new Ultrasonic(TrigPin, EchoPin)),
-	gyro(new Gyro(GyroPin)) {
-	mult = -10;
+	gyro(new AnalogGyro(GyroPin)) {
+	mult = -50;
 	leftJoyRaw = 1;
 	rightJoyRaw = 1;
 	frontUltra->SetAutomaticMode(true);
@@ -20,8 +20,8 @@ void DriveTrain::InitDefaultCommand() {
 }
 
 void DriveTrain::tankDrive(double leftJoyRaw, double rightJoyRaw) {
-	double leftSpeed = leftJoyRaw * mult;
-	double rightSpeed = rightJoyRaw * mult;
+	double leftSpeed = leftJoyRaw*mult;
+	double rightSpeed = rightJoyRaw*mult;
 	leftWheel->Set(leftSpeed);
 	rightWheel->Set(rightSpeed);
 }
@@ -38,7 +38,7 @@ CANTalon* DriveTrain::GetRightWheel(){
 	return rightWheel;
 }
 
-Gyro* DriveTrain::GetGyro(){
+AnalogGyro* DriveTrain::GetGyro(){
 	return gyro;
 }
 
