@@ -10,13 +10,12 @@
 #include "Commands/TankDrive.h"
 
 #include "CommandBase.h"
-#include "Commands/AutoCode.h"
 
 class Robot: public frc::IterativeRobot {
-
 public:
 	void RobotInit() override {
-		chooser.AddDefault("Default Auto", new AutoCode());
+		//chooser.AddDefaul
+		("Default Auto", new TankDrive());
 		// chooser.AddObject("My Auto", new MyAutoCommand());
 		CommandBase::initialize();
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
